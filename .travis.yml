@@ -4,6 +4,7 @@ jdk:
 
 cache:
   directories:
+    - node_modules
     - "$HOME/.ivy2"
     - "$HOME/.sbt"
 
