@@ -1,0 +1,21 @@
+language: scala
+jdk:
+- oraclejdk8
+
+cache:
+  directories:
+    - "$HOME/.ivy2"
+    - "$HOME/.sbt"
+
+script:
+  - npx webpack
+  - sbt assembly
+
+deploy:
+  provider: releases
+  api_key: "$GITHUB_TOKEN"
+  skip_cleanup: true
+  file_glob: true
+  file: target/scala-2.12/gitbucket-*-plugin*.jar
+  on:
+    tags: true

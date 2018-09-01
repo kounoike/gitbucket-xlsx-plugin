@@ -1,0 +1,34 @@
+{
+  "name": "gitbucket-xlsx-plugin",
+  "version": "1.0.0",
+  "description": "GitBucket .xlsx rendering plugin",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kounoike/gitbucket-xlsx-plugin.git"
+  },
+  "keywords": [
+    "gitbucket",
+    "xlsx"
+  ],
+  "author": "KOUNOIKE Yuusuke",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kounoike/gitbucket-xlsx-plugin/issues"
+  },
+  "homepage": "https://github.com/kounoike/gitbucket-xlsx-plugin#readme",
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "jquery": "^3.3.1",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "xlsx": "^0.13.5"
+  },
+  "dependencies": {
+    "jquery-binarytransport": "^1.0.0"
+  }
+}
