@@ -8,6 +8,7 @@ cache:
     - "$HOME/.sbt"
 
 script:
+  - npm install -D
   - npx webpack
   - sbt assembly
 
