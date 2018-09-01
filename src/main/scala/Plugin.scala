@@ -5,8 +5,8 @@ import javax.servlet.ServletContext
 
 class Plugin extends gitbucket.core.plugin.Plugin {
   override val pluginId: String = "xlsx"
-  override val pluginName: String = "Excel renderer Plugin"
-  override val description: String = "Rendering Excel files."
+  override val pluginName: String = "Xlsx renderer Plugin"
+  override val description: String = "Rendering xlsx files."
   override val versions: List[Version] = List(new Version("1.0.0"))
 
   override val assetsMappings: Seq[(String, String)] = Seq("/xlsx" -> "/assets")
