@@ -1,0 +1,49 @@
+name: Scala CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '12'
+    - name: Cache SBT ivy cache
+      uses: actions/cache@v1
+      with:
+        path: ~/.ivy2/cache
+        key: ${{ runner.os }}-sbt-ivy-cache-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-sbt-ivy-cache-
+    - name: Cache Coursier cache
+      uses: actions/cache@v1
+      with:
+        path: ~/.cache/coursier
+        key: ${{ runner.os }}-sbt-coursier-cache-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-sbt-coursier-cache-
+    - name: Cache SBT
+      uses: actions/cache@v1
+      with:
+        path: ~/.sbt
+        key: ${{ runner.os }}-sbt-cache-${{ github.run_id }}
+        restore-keys: |
+          ${{ runner.os }}-sbt-cache-
+    - name: Cache Yarn
+      uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
+    - name: Run build
+      run: |
+        npm install -D
+        npx webpack
+        sbt assembly
