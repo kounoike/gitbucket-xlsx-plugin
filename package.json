@@ -23,7 +23,7 @@
   "devDependencies": {
     "css-loader": "^1.0.0",
     "jquery": "^3.5.0",
-    "style-loader": "^0.23.0",
+    "style-loader": "^2.0.0",
     "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "xlsx": "^0.16.9"
