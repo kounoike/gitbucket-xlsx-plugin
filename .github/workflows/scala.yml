@@ -37,11 +37,11 @@ jobs:
         key: ${{ runner.os }}-sbt-cache-${{ github.run_id }}
         restore-keys: |
           ${{ runner.os }}-sbt-cache-
-    - name: Cache Yarn
+    - name: Cache NPM
       uses: actions/cache@v2
       with:
         path: '**/node_modules'
-        key: ${{ runner.os }}-node-modules-${{ hashFiles('**/yarn.lock') }}
+        key: ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}
     - name: Run build
       run: |
         npm install -D
