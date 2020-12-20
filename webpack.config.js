@@ -12,9 +12,6 @@ module.exports = {
         process: false,
         Buffer: false
     },
-    resolve: {
-        alias: { "./dist/cpexcel.js": "" }
-    },
     module: {
         rules: [
             {
