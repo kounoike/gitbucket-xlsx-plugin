@@ -26,7 +26,7 @@
     "style-loader": "^2.0.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^4.3.1",
-    "xlsx": "^0.16.9"
+    "xlsx": "^0.17.0"
   },
   "dependencies": {
     "jquery-binarytransport": "^1.0.0"
