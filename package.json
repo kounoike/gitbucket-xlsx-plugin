@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/kounoike/gitbucket-xlsx-plugin#readme",
   "devDependencies": {
-    "css-loader": "^5.0.1",
+    "css-loader": "^5.2.5",
     "jquery": "^3.5.1",
     "style-loader": "^2.0.0",
     "webpack": "^4.44.2",
